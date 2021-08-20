@@ -5,17 +5,13 @@ imshow(reference)
 %noise1 for variance 0.01
 noise1=imnoise(image,"gaussian",0,0.01); %noise of variance=0.01
 imshow(noise1)
-prewitt_1=edge(noise1,'prewitt'); %prewitt edge detection for image
-with noise of variance 0.01
+prewitt_1=edge(noise1,'prewitt'); %prewitt edge detection for image with noise of variance 0.01
 imshow(prewitt_1)
-Sobel_1=edge(noise1,'sobel'); %Sobel edge detection for image with
-noise of variance 0.01
+Sobel_1=edge(noise1,'sobel'); %Sobel edge detection for image with noise of variance 0.01
 imshow(Sobel_1)
-LoG_1=edge(noise1,'LoG'); %Laplace of Gaussian edge detection for
-image with noise of variance 0.01
+LoG_1=edge(noise1,'LoG'); %Laplace of Gaussian edge detection for image with noise of variance 0.01
 imshow(LoG_1)
-Canny_1=edge(noise1,'canny'); %Laplace of Gaussian edge detection for
-image with noise of variance 0.01
+Canny_1=edge(noise1,'canny'); %Laplace of Gaussian edge detection for image with noise of variance 0.01
 imshow(Canny_1)
 %calculating Sobel RMSE value
 mse_Sobel_1=(1/(512*512))*(Sobel_1-reference).^2;
@@ -36,14 +32,11 @@ rmse_Canny_1=sqrt(ans)
 %for noise_2 of variance 0.1
 noise2=imnoise(image,"gaussian",0,0.05); %noise of variance=0.01
 imshow(noise2)
-prewitt_2=edge(noise2,'prewitt'); %prewitt edge detection for image
-with noise of variance 0.01
+prewitt_2=edge(noise2,'prewitt'); %prewitt edge detection for image with noise of variance 0.01
 imshow(prewitt_2)
-Sobel_2=edge(noise2,'sobel'); %Sobel edge detection for image with
-noise of variance 0.01
+Sobel_2=edge(noise2,'sobel'); %Sobel edge detection for image with noise of variance 0.01
 imshow(Sobel_2)
-LoG_2=edge(noise2,'LoG'); %Laplace of Gaussian edge detection for
-image with noise of variance 0.01
+LoG_2=edge(noise2,'LoG'); %Laplace of Gaussian edge detection for image with noise of variance 0.01
 imshow(LoG_2)
 of variance 0.01
 imshow(Canny_3)
